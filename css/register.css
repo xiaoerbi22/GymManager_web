@@ -1,0 +1,70 @@
+body{
+    height: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    color: #fff;
+    background-image: url('../image/bg_3.jpg');
+    background-repeat:no-repeat;
+    background-position:center center;
+    background-attachment:fixed;
+    background-size: cover;
+}
+.background{
+    z-index: 1;
+}
+.box{
+    width: 300px;
+    padding: 40px;
+    position: absolute;   /* 绝对定位，相对于父标签来进行定位 */
+    bottom: 50px;
+    right: 220px;
+    transform: translate(-50%,-50%);
+    border-radius: 66px;
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: center;  /*表单中内容居中*/
+}
+.box h1{
+    color: white;    /* 设置字体颜色 */
+    text-transform: uppercase;  /* 将字体全部设置成大写字母  */
+    font-weight: 500;  /*  设置字体粗细   */
+}
+.box input[type="text"],.box input[type="password"]{
+    border-radius: 25px;
+    border: 2px solid #3498db;
+    background: none;
+    display: block;
+    margin: 22px auto;
+    text-align: center;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: white;     /* 设置输入框中竖线的颜色 */
+    transition: 0.22s;   /* 设置元素过渡效果 */
+}
+.box input[type="text"]:focus, .box input[type="password"]:focus{
+    width: 280px;
+    border-color: #2ecc71;
+}
+/* 设置提交按钮的样式 */
+.box input[type="button"]{
+    border-radius: 25px;
+    border: 2px solid #2ecc71;
+    background: none;
+    display: block;
+    margin: 22px auto;
+    text-align: center;
+    padding: 15px 40px;
+    outline: none;
+    color: white;     /* 设置输入框中竖线的颜色 */
+    transition: 0.22s;
+    cursor: pointer;    /* 设置光标的样式 */
+}
+/* 设置鼠标移入到按钮上的样式 */
+.box input[type="button"]:hover{
+    background: #1ecc71;
+}
+.box a[href="register.html"]{
+    text-decoration: none;
+    color:greenyellow;
+    cursor: pointer;    /* 设置光标的样式 */
+}

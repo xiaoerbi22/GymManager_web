@@ -1,0 +1,116 @@
+body{
+    height: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    color: #fff;
+    /* 最重要的是这里不能写定位，下面子元素背景要给绝对定位 */
+    background-image: url('../image/bg_1.jpg');
+    background-repeat:no-repeat;
+    background-position:center center;
+    background-attachment:fixed;
+    background-size: cover;
+}
+.someword1{
+    top:550px;
+    right:150px;
+    position: absolute;
+}
+.someword1 h1{
+    font-size:34px;
+}
+.someword1 p{
+    position: center;
+    font-size:22px;
+}
+.someword2{
+    top:550px;
+    left:150px;
+    position: absolute;
+}
+.someword2 h1{
+    font-size:34px;
+}
+.someword2 p{
+    position: center;
+    font-size:22px;
+}
+#logo{
+    position:absolute;
+    /*right: 30px;*/
+    /*left: -50px;*/
+    /*bottom:220px;*/
+    top:450px;
+    right:750px;
+    width:432px;
+    height:360px;
+}
+.box{
+    width: 300px;
+    padding: 40px;
+    position: absolute;   /* 绝对定位，相对于父标签来进行定位 */
+    top: 240px;
+    left: 360px;
+    transform: translate(-50%,-50%);
+    border-radius: 66px;
+    background-color: rgba(99, 99, 99, 0.16);
+    /*text-align: center;  !*表单中内容居中*!*/
+}
+.box h1{
+    color: white;    /* 设置字体颜色 */
+    text-transform: uppercase;  /* 将字体全部设置成大写字母  */
+    font-weight: 500;  /*  设置字体粗细   */
+    text-align: center;
+    font-size:58px;
+}
+/* 设置提交按钮的样式 */
+input[id=button1]{
+    border-radius: 24px;
+    border: 2px solid #1ecc71;
+    background: none;
+    font-size:22px;
+    display: block;
+    transition: 0.22s;   /* 设置元素过渡效果 */
+    margin: 22px auto;
+    text-align: center;
+    padding: 15px 40px;
+    outline: none;
+    color: white;     /* 设置输入框中竖线的颜色 */
+    transition: 0.22s;
+    cursor: pointer;    /* 设置光标的样式 */
+}
+.box2 {
+    width: 300px;
+    padding: 40px;
+    position: absolute;   /* 绝对定位，相对于父标签来进行定位 */
+    top: 240px;
+    right: 0px;
+    transform: translate(-50%,-50%);
+    border-radius: 66px;
+    background-color: rgba(99, 99, 99, 0.16);
+}
+.box2 h1{
+    color: white;    /* 设置字体颜色 */
+    text-transform: uppercase;  /* 将字体全部设置成大写字母  */
+    font-weight: 500;  /*  设置字体粗细   */
+    text-align: center;
+    font-size: 58px;
+}
+.box2 input[id=button2]{
+    border-radius: 24px;
+    border: 2px solid #1ecc71;
+    background: none;
+    font-size:22px;
+    display: block;
+    transition: 0.22s;   /* 设置元素过渡效果 */
+    margin: 22px auto;
+    text-align: center;
+    padding: 15px 40px;
+    outline: none;
+    color: white;     /* 设置输入框中竖线的颜色 */
+    transition: 0.22s;
+    cursor: pointer;    /* 设置光标的样式 */
+}
+/* 设置鼠标移入到按钮上的样式 */
+input[type="button"]:hover{
+    background: #1ecc71;
+}

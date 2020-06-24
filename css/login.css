@@ -4,7 +4,7 @@ body{
     overflow: hidden;
     color: #fff;
     /* 最重要的是这里不能写定位，下面子元素背景要给绝对定位 */
-    background-image: url('1.jpg');
+    background-image: url('../image/bg_2.jpg');
     background-repeat:no-repeat;
     background-position:center center;
     background-attachment:fixed;
@@ -14,11 +14,11 @@ body{
     z-index: 1;
 }
 .box{
-    width: 300px;
+    width: 460px;
     padding: 40px;
     position: absolute;   /* 绝对定位，相对于父标签来进行定位 */
-    top: 50%;
-    left: 50%;
+    top: 430px;
+    right: 60px;
     transform: translate(-50%,-50%);
     border-radius: 66px;
     background-color: rgba(0, 0, 0, 0.6);
