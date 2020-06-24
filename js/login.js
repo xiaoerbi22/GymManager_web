@@ -11,7 +11,7 @@ function login()
         success: function (data) {
             var token = 'Bearer ' + data.token;
             setCookie("token", token, 1);
-            //location.assign('chooseCourse.html');
+            location.assign('chooseCourse.html');
             let jwt_token = decodeURIComponent(escape(window.atob(data.token.split('.')[1])))
             let result = JSON.parse(jwt_token).uid;
             setCookie("uid", result, 1);
