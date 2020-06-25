@@ -1,0 +1,157 @@
+<!DOCTYPE html >
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="GBK">
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="../js/transferCard.js"></script>
+<link rel="stylesheet" href="../css/admin.css" />
+<title>Information search</title>
+<style>
+</style>
+</head>
+<body>
+
+<div id="header">
+   <div id="logo">
+   <a href="/">
+      <img src="../image/1.jpg"/>
+   </a>
+   </div><div class="title">健身管理系统</div>
+   <div class="dhcc">
+   <ul>
+   <li class="ss">
+      <a class="select" href="">
+         <span>网站首页
+         </span>
+      </a>
+      </li>
+      <li class="ll">|</li>
+      <li class="ss">
+      <a class="select" href="">
+         <span>查讯信息
+         </span>
+      </a>
+      </li>
+      <li class="ll">|</li>
+      <li class="ss">
+      <a class="select" href="/">
+         <span>联系我们
+         </span>
+      </a>
+      </li>
+   </ul>
+   </div>
+   <div class="user">
+      <img src="../image/12.png" style="width:60px;height:60px;">
+      <div class="wechat_code">ID: 1<br>用户名: admin<br>权限: 管理员</div>
+   </div>
+</div>
+<div class="title1">
+  <div class="pic1">
+     <img src="../image/8.jpg" style="width:100px;height:100px;"/>
+  </div>
+  <div class="xi">管理员信息系统</div>
+</div>
+<div class="border">
+   <div class="let">
+   <div class="to"></div>
+   <div class="lef">
+     <ul>
+     <li onclick="show(this)" >
+     <div class="sd">  <img src="../image/15.png" style="margin-left:0px;padding:0px; margin-top:5px;float:left;display:none">
+                        <img src="../image/16.png" style="margin-left:0px;padding:0px; margin-top:5px;float:left;display:block">  
+     注销信息</div>
+        <ul style="display:none">
+     <li> <div class="b"><button onclick="deleteCourse();"style="margin-top:0px;">注销课程</button></div> </li>
+     <li> <div class="b"><button onclick="deleteCoach();"style="margin-top:0px;">注销教练</button></div></li>
+      </ul></li>
+        <li onclick="show(this)"><div class="sd"><img src="../image/15.png" style="margin-left:0px;padding:0px; margin-top:5px;float:left;display:none">
+                        <img src="../image/16.png" style="margin-left:0px;padding:0px; margin-top:5px;float:left;display:block"> 
+                        查询信息</div>
+        <ul style="display:none">
+    <li>  <div class="b"><button onclick="Vip();" style="margin-top:0px; ">查询VIP</button></div></li>
+   <li>   <div class="b"><button onclick="Coach();" style="margin-top:0px;">查询教练</button></div></li>
+    <li>  <div class="b"><button onclick="Course();"style="margin-top:0px;">查询课程</button></div></li>
+      </ul></li>
+      <li onclick="show(this)"><div class="sd"><img src="../image/15.png" style="margin-left:0px;padding:0px; margin-top:5px;float:left;display:none">
+                        <img src="../image/16.png" style="margin-left:0px;padding:0px; margin-top:5px;float:left;display:block"> 
+      会员转卡</div>
+        <ul style="display:none">
+     <li> <div class="b"><button onclick="vipCard();"style="margin-top:0px;">会员转卡</button></div> </li>
+      </ul></li>
+      </ul>
+   </div>
+   </div>
+   <div class="fo">
+       <form>
+           <div id="pa" class="current">
+           <ul class="tet">
+               <li class="delt1">会员信息查询 </li>
+               <li><br><br><hr/></li>
+               <li class="delt">   
+                                                  会员手机号码:<input type="text" name="vipPhoneNumber" id="vipPhoneNumber" style="margin-left:20px;margin-top:40px;"></li>
+                 <li class="lili">    <input type="button" value="查询"   onclick="click1()"  style="margin-left:20px; color:#fff; width:100px; background-color:#6666FF; border-color:#6666FF;"> </li>
+            </ul>        
+                  <p id="hang"></p>                  
+                      
+           </div>
+           <div id="pb">
+           <ul class="tet">
+           <li class="delt1">教练信息查询 </li>
+               <li><br><br><hr/></li>
+           <li class="delt">  
+                                                  教练手机号:<input type="text" name="coachPhoneNumber" id="coachPhoneNumber" style="margin-left:20px;margin-top:40px;"></li>
+              <li>    <input type="button" value="查询" onclick="click2()" style="margin-left:920px; color:#fff; width:100px; background-color:#6666FF; border-color:#6666FF;margin-top:40px;"> </li>  </ul>
+                   <p id="dang"></p>
+           </div>
+           <div id="pc">
+           <ul class="tet">
+           <li class="delt1">课程信息查询 </li>
+               <li><br><br><hr/></li>
+   <li class="delt2">        
+                                             课程名称:<input type="text" name="courseName" id="courseName" style="margin-left:17px;margin-top:40px;"> </li>
+                 <li>   <input type="button" value="查询" onclick="click3()"  style="margin-left:920px; color:#fff; width:100px; background-color:#6666FF; border-color:#6666FF">   </li>     </ul>                                         
+                      <p id="fang"></p>           
+           </div>
+           <div id="pd">
+                <ul class="tet">
+                <li class="delt3">课程注销 </li>
+               <li><br><br><hr/></li>
+ <li class="delt2">   课程ID:<input type="text" name="deleteCourseId" id="deleteCourseId" style="margin-left:13px;margin-top:40px;"> </li>
+      <li>           <input type="button" value="删除" onclick="click4()"  style="margin-left:920px; color:#fff; width:100px; background-color:#6666FF; border-color:#6666FF">                         </li>
+                </ul>
+           </div>
+           <div id="pf">
+           <ul class="tet">
+           <li class="delt3">教练注销 </li>
+               <li><br><br><hr/></li>
+ <li class="delt2">   教练ID:<input type="text" name="deleteCoachId" id="deleteCoachId" style="margin-left:11px;margin-top:40px;"> </li>
+      <li>           <input type="button" value="删除" onclick="click5()"  style="margin-left:920px; color:#fff; width:100px; background-color:#6666FF; border-color:#6666FF">                         </li>
+             </ul>
+           </div>
+           <div id="pg">
+             <ul class="tet">
+                 <li class="delt3">转卡</li>
+                 <li><br><br><hr/></li>
+                 <li class="delt2">   转出卡号:<input type="text" name="oldVipId" id="oldVipId" style="margin-left:11px;margin-top:40px;"> </li>
+                 <li class="delt2">   转入卡号:<input type="text" name="newVipId" id="newVipId"style="margin-left:11px;margin-top:40px;"> </li>
+                 <li>           <input type="button" value="转卡" onclick="transferCard()"  style="margin-left:920px; color:#fff; width:100px; background-color:#6666FF; border-color:#6666FF">                         </li>
+             </ul>
+           </div>
+       </form>
+   </div>
+</div>
+<div class="under">
+     <div class="lete">
+         <div class="tit">健身管理有限公司</div>
+         <div class="tes">地址: 广东省广州市</div>
+         <div class="tes">电话: XXXX-XXXXXXX</div>
+     </div>
+     <div class="er">
+       <img src="../image/11.png" style="width:70px;height:70px;">
+     </div>
+ </div>
+<script>
+</script>
+</body>
+</html>
