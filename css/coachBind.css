@@ -1,0 +1,24 @@
+/*背景的设置*/
+body{
+    /*图片*/
+    background-image: url("../img/timg.jpg");
+    height:100%;
+    width:100%;
+    overflow: hidden;
+    background-size:cover
+}
+/*绑定信息的大框*/
+.bindInfo{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    color: white;
+    background-color: #cccccc;
+}
+/*按钮*/
+#submit-item{
+    margin-top: 30px;
+    width: 150px;
+    height: 50px;
+    align-self: center;
+}
